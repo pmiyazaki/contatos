@@ -12,6 +12,7 @@ export class ListaDeContatosComponent implements OnInit {
     { nome:'Patricia Miyazaki',
       email: 'pmiyazakii@gmail.com',
       telefones:['1111-1111'],
+      
     },
     { nome:'Patricia Miyazaki',
       email: 'pmiyazakii@gmail.com',
@@ -43,7 +44,7 @@ export class ListaDeContatosComponent implements OnInit {
     },
     { nome:'Patricia Miyazaki',
       email: 'pmiyazakii@gmail.com',
-      telefones:['9999-9999'],
+      telefones:['9999-9999', '9999-9999'],
     },
     { nome:'Patricia Miyazaki',
       email: 'pmiyazakii@gmail.com',
