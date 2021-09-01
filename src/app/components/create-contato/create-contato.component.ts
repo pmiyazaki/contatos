@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Contato } from 'src/app/models/Contato';
+import { ContatoService } from 'src/app/services/contato.service';
 
 @Component({
   selector: 'app-create-contato',
@@ -7,14 +8,16 @@ import { Contato } from 'src/app/models/Contato';
   styleUrls: ['./create-contato.component.css']
 })
 export class CreateContatoComponent implements OnInit {
-   
+ 
+  @Output() onCancelarClick:EventEmitter<null> = new EventEmitter();
+
   novoContato:Contato = {
     nome:'',
     email:'',
     telefones:['']
   }
 
-  @Output() onCancelarClick:EventEmitter<null> = new EventEmitter();
+  cs:ContatoService = new ContatoService();
 
   constructor() { }
 
@@ -33,6 +36,20 @@ export class CreateContatoComponent implements OnInit {
 
   removeTelefone(pos:number):void{
     this.novoContato.telefones.splice(pos,1)
+  }
+
+  salvar() {
+    this.cs.addContato(this.novoContato);
+    
+    //Se quiser fazer  tela sumir
+    this.onCancelarClick.emit();
+
+    //Manter a tela e limpar os campos para a adição de um novo contatos
+    //this.novoContato = {
+    //nome:'',
+    //  email:'',
+    //  telefones:['']
+    //}
   }
 
   ngOnInit(): void {
