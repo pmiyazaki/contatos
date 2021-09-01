@@ -27,6 +27,10 @@ export class CreateContatoComponent implements OnInit {
     return index;
   }
 
+  addTelefone():void{
+    this.novoContato.telefones.push('');
+  }
+
   ngOnInit(): void {
   }
 
