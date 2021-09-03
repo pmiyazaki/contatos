@@ -20,11 +20,11 @@ Criação e Exibição do componente que adiciona/cria um novo contato:
         ✔ Marque app-create-contato para que ele só seja exibido se o mostrandoCreateContato seja true (Dica: *ngIf) @done(21-08-31 11:04)
     Fazendo com que ele seja exibido quando o menu seja clicado:
         ✔ No MenuComponent.ts crie uma função mostrarModalClick que seja executada toda vez que o item "Adicionar Contato" seja clicado. @done(21-08-31 11:55)
-        ☐ Crie um emissor de evento e faça com que ele emita um evento na função mostrarModalClick
-        ☐ No app.component.html associe o evento emitido à execução de uma função mostrarModal.
+        ✔ Crie um emissor de evento e faça com que ele emita um evento na função mostrarModalClick @done(21-09-03 17:03)
+        ✔ No app.component.html associe o evento emitido à execução de uma função mostrarModal. @done(21-09-03 17:03)
            Essa função, definida no AppComponent, deve alterar o valor do atributo mostrandoCreateContato para true;
     Fazendo com que ele seja escondido quando o cancelar seja clicado:
-        ☐ ... escreva aqui os passos ... análogos ao do item anterior.
+        ✔ ... escreva aqui os passos ... análogos ao do item anterior. @done(21-09-03 17:03)
 
 Archive:
   ✔ Crie uma pasta "img" dentro da pasta /src/assets/ @started(21-08-30 09:35) @done(21-08-30 09:35) @lasted(42s) @project(Aparência geral)
